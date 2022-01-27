@@ -10,6 +10,21 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-logo">
+        <%= link_to("Commu", "/") %>
+      </div>
+      <ul class="header-menus">
+        <li>
+          <%= link_to("about", "/about") %>
+        </li>
+        <li>
+          <%= link_to("signup", "/signup") %>
+        </li>
+
+      </ul>
+    </header>
+
     <%= yield %>
   </body>
 </html>
