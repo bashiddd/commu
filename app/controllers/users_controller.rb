@@ -13,6 +13,10 @@ class UsersController < ApplicationController
       password: params[:password],
       image_name: "default_user.jpg"
     )
+
+    if @user.save
+      session[:user_id] = @user.id
+    end
   end
   
 end
