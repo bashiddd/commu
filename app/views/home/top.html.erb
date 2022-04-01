@@ -1,1 +1,14 @@
-<%= link_to("signup", "/signup") %>
+<div class="form">
+    <div class="login-form">
+        <%= form_tag("/login") do %>
+            <p> ユーザー名</p>
+            <input name="name", value="<%= @email %>">
+            <p>パスワード</p>
+            <input name="password", type="password", value="<%= @password %>">
+            <input type="submit", value="ログイン">
+        <% end %>
+    </div>
+    <div class="signup">
+        <%= link_to("新規登録", "/signup") %>
+    </div>
+</div>

@@ -18,5 +18,13 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
     end
   end
+
+  def login
+    @user = User.find_by(email: params[:emali], password: params[:password])
+    if @user
+      session[:user_id] = @user.id
+    end
+  end
+  
   
 end
