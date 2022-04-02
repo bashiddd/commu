@@ -1,7 +1,49 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-header {
-    height: 70px;
-    background-color: rgb(218, 196, 168);
+
+.top {
+    display: flex;
+    width: 100%;
+    height: 700px;
+    
+}
+
+.top h1 {
+    font-size: 50px;
+}
+
+.about {
+    flex: 2;
+    margin: 100px 0 100px 150px;
+}
+
+.form {
+    border: 3px solid black;
+    border-radius: 7px;
+    flex: 1;
+    margin: 100px 200px 100px 0;
+}
+
+.login-form {
+    text-align: center;
+    margin-top: 70px;
+}
+
+input[type="text"] {
+    height: 30px;
+    width: 230px;
+    border-radius: 10px;
+}
+
+input[type="password"] {
+    height: 30px;
+    width: 230px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.login-btn {
+    display: block;
+    margin: 0 auto;
 }

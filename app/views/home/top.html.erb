@@ -1,17 +1,20 @@
-<div class="about">
-    <h1>ここになんかかく</h1>
-</div>
-<div class="form">
-    <div class="login-form">
-        <%= form_tag("/login") do %>
-            <p> ユーザー名</p>
-            <input name="name", value="<%= @email %>">
-            <p>パスワード</p>
-            <input name="password", type="password", value="<%= @password %>">
-            <input type="submit", value="ログイン">
-        <% end %>
+<div class="top">
+    <div class="about">
+        <h1>ここになんか書く</h1>
     </div>
-    <div class="signup">
-        <%= link_to("新規登録", "/signup") %>
+    <div class="form">
+        <div class="login-form">
+            <%= form_tag("/login") do %>
+                <p> ユーザー名</p>
+                <input name="name", type="text", value="<%= @name %>">
+                <p>パスワード</p>
+                <input name="password", type="password", value="<%= @password %>">
+                <input class="login-btn", type="submit", value="ログイン">
+            <% end %>
+        </div>
+        <div class="signup">
+                <p>または</p>
+            <%= link_to("新規登録", "/signup") %>
+        </div>
     </div>
 </div>

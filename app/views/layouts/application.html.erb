@@ -13,9 +13,9 @@
     <header>
       <div class="header-logo">
         <% if @current_user %>
-          <%= link_to("Commu","/commu/top")%>
+          <a href="/commu/top">Commu</a>
         <% else %>
-          <%= link_to("Commu", "/") %>
+          <a href="/">Commu</a>
         <% end %>
       </div>
       <ul class="header-menus">

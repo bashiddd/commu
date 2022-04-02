@@ -33,7 +33,7 @@ class UsersController < ApplicationController
       @error_message = "ユーザー名またはパスワードが違います"
       @name = params[:name] 
       @password = params[:password]
-      render("users/login_form") 
+      render("home/top") 
     end
   end
 
