@@ -15,10 +15,19 @@
         <%= link_to("Commu", "/") %>
       </div>
       <ul class="header-menus">
-        <li>
-        </li>
+        <% if @current_user %>
+          <li>
+            <%= link_to("ログアウト","/logout",{method: "post"}) %>
+          </li>
+        <% end %>
       </ul>
     </header>
+
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice]%>
+      </div>
+    <% end %>
 
     <%= yield %>
   </body>

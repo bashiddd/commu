@@ -16,14 +16,29 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
+      flash[:notice] = "新規登録が完了しました"
+    else
+      render("users/new")
     end
   end
 
   def login
-    @user = User.find_by(email: params[:emali], password: params[:password])
+    @user = User.find_by(name: params[:name], password: params[:password])
     if @user
       session[:user_id] = @user.id
+      flash[:notice] = "ログインしました"
+    else
+      @error_message = "ユーザー名またはパスワードが違います"
+      @name = params[:name] 
+      @password = params[:password]
+      render("users/login_form") 
     end
+  end
+
+  def logout
+    session[:user_id] = nil
+    flash[:notice] = "ログアウトしました"
+    redirect_to("/")
   end
   
   
