@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'commu/top'
+  get "commu/top" => "commu#top"
   get "signup" => "users#new"
   post "users/create" => "users#create"
   post "login" => "users#login"

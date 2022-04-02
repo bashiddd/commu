@@ -12,7 +12,11 @@
   <body>
     <header>
       <div class="header-logo">
-        <%= link_to("Commu", "/") %>
+        <% if @current_user %>
+          <%= link_to("Commu","/commu/top")%>
+        <% else %>
+          <%= link_to("Commu", "/") %>
+        <% end %>
       </div>
       <ul class="header-menus">
         <% if @current_user %>

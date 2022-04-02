@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "新規登録が完了しました"
+      redirect_to("/commu/top")
     else
       render("users/new")
     end
@@ -27,6 +28,7 @@ class UsersController < ApplicationController
     if @user
       session[:user_id] = @user.id
       flash[:notice] = "ログインしました"
+      redirect_to("/commu/top")
     else
       @error_message = "ユーザー名またはパスワードが違います"
       @name = params[:name] 
