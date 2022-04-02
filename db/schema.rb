@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_01_142849) do
+ActiveRecord::Schema.define(version: 2022_04_02_085227) do
+
+  create_table "communities", force: :cascade do |t|
+    t.string "name"
+    t.string "area"
+    t.string "genre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.text "content"

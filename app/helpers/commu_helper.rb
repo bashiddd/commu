@@ -1,0 +1,2 @@
+module CommuHelper
+end
