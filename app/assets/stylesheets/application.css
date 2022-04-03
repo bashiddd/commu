@@ -21,6 +21,7 @@
  header {
     height: 70px;
     background-color: #65CED0;
+    display: flex;
 }
 
 .header-logo a {
@@ -30,4 +31,22 @@
     font-size: 20px;
     margin-left: 20px;
     line-height: 70px;
+}
+
+.header-menus {
+    margin-left: 1150px;
+    line-height: 70px;
+}
+
+.my-page {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.logout {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
 }

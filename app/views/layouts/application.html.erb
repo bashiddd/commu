@@ -18,13 +18,12 @@
           <a href="/">Commu</a>
         <% end %>
       </div>
-      <ul class="header-menus">
+      <div class="header-menus">
         <% if @current_user %>
-          <li>
-            <%= link_to("ログアウト","/logout",{method: "post"}) %>
-          </li>
+          <%= link_to("マイページ","/logout", method: "post", class: "my-page") %>
+          <%= link_to("ログアウト","/logout", method: "post", class: "logout") %>
         <% end %>
-      </ul>
+      </div>
     </header>
 
     <% if flash[:notice] %>
