@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
-  # def show
-  #   @user = User.find_by(id: params[:id])
-  # end
-
+  # before_action :authenticate_user, {only: [:show]}
+  before_action :forbid_login_user, {only: [:login]}
+  before_action :ensure_correct_user, {only: [:show]}
   def new
     @user = User.new
   end
@@ -43,5 +42,15 @@ class UsersController < ApplicationController
     redirect_to("/")
   end
   
+  def show
+    @user = User.find_by(id: params[:id])
+  end
+
+  def ensure_correct_user
+    if @current_user.id != params[:id].to_i
+      flash[:notice] = "権限がありません"
+      redirect_to("/")
+    end
+  end
   
 end
