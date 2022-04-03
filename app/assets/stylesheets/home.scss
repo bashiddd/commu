@@ -11,23 +11,31 @@
 
 .top h1 {
     font-size: 50px;
+    margin: 0 0 33.5px 0;
 }
 
 .about {
     flex: 2;
-    margin: 100px 0 100px 150px;
+    margin: 133.5px 0 100px 150px;
 }
 
 .form {
     border: 3px solid black;
-    border-radius: 7px;
+    border-radius: 10px;
     flex: 1;
-    margin: 100px 200px 100px 0;
+    margin: 133.5px 200px 100px 0;
+    background-color: #dee6e6;
+    box-shadow: 6px 6px darken(white, 10%);
+    font-weight: bold;
 }
 
 .login-form {
     text-align: center;
     margin-top: 70px;
+}
+
+input {
+    background-color: #f5f5f5;
 }
 
 input[type="text"] {
@@ -46,4 +54,54 @@ input[type="password"] {
 .login-btn {
     display: block;
     margin: 0 auto;
+    background-color: #f5f5f5;
+    color: black;
+    border: 2px solid black;
+    border-color: rgb(118,118,118);
+    border-radius: 10px;
+    width: 100px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 0 darken(#dee6e6, 10%);
+}
+
+.signup p {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.signup-btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid black;
+    border-color: rgb(118,118,118);
+    border-radius: 10px;
+    height: 28px;
+    width: 150px;
+    line-height: 28px;
+    color: black;
+    background-color: #f5f5f5;
+    box-shadow: 0 5px 0 darken(#dee6e6, 10%);
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    opacity: 0.8;
+}
+
+.signup-btn:hover {
+    opacity: 0.8;
+}
+
+.login-btn:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.signup-btn:active {
+    box-shadow: none;
+    transform: translateY(5px);
 }

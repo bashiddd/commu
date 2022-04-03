@@ -8,15 +8,15 @@
         <div class="login-form">
             <%= form_tag("/login") do %>
                 <p> ユーザー名</p>
-                <input name="name", type="text", value="<%= @name %>">
+                <input name="name", type="text", value="<%= @name %>", placeholder="user name">
                 <p>パスワード</p>
-                <input name="password", type="password", value="<%= @password %>">
+                <input name="password", type="password", value="<%= @password %>", placeholder="password">
                 <input class="login-btn", type="submit", value="ログイン">
             <% end %>
         </div>
         <div class="signup">
                 <p>または</p>
-            <%= link_to("新規登録", "/signup") %>
+            <%= link_to("新規登録", "/signup", class: "signup-btn") %>
         </div>
     </div>
 </div>
