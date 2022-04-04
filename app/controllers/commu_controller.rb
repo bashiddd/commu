@@ -3,4 +3,8 @@ class CommuController < ApplicationController
 
   def top
   end
+
+  def create
+    
+  end
 end
