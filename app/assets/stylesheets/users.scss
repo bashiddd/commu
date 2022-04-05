@@ -81,8 +81,8 @@
     margin: 0 auto;
     text-align: center;
     margin-top: 70px;
-    height: 400px;
-    width: 550px;
+    height: 580px;
+    width: 680px;
     border: 3px solid black;
     border-radius: 10px;
     // margin: 133.5px 200px 100px 0;
@@ -108,11 +108,38 @@
     border-radius: 10px;
 }
 
-// .signup-form input[type="file"] {
+.edit-form textarea {
+    text-align: center;
+}
 
+// .edit-form input[type="submit"] {
+//     display: block;
+//     margin: 0 auto;
+//     margin-top: 20px;
 // }
 
-.editup-btn {
-    text-align: center;
-    margin-top: 20px;
+.edit-btn {
+    display: block;
+    margin: 0 auto;
+    // text-align: center;
+    text-decoration: none;
+    border: 2px solid black;
+    border-color: rgb(118,118,118);
+    border-radius: 10px;
+    height: 28px;
+    width: 150px;
+    line-height: 28px;
+    color: black;
+    background-color: #f5f5f5;
+    box-shadow: 0 5px 0 darken(#dee6e6, 10%);
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    opacity: 0.8;
+}
+
+.edit-btn:active {
+    box-shadow: none;
+    transform: translateY(5px);
 }

@@ -69,6 +69,7 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @user.name = params[:name]
     @user.password = params[:password]
+    @user.bio = params[:bio]
     
     if params[:image]
       @user.image_name = "#{@user.id}.jpg"
@@ -83,5 +84,5 @@ class UsersController < ApplicationController
       render("users/edit")
     end
   end
-  
+
 end
