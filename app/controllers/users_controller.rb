@@ -10,9 +10,8 @@ class UsersController < ApplicationController
     @user = User.new(
       name: params[:name],
       password: params[:password],
-      image_name: "default_user.jpg"
     )
-
+    
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "新規登録が完了しました"
@@ -20,6 +19,15 @@ class UsersController < ApplicationController
     else
       render("users/new")
     end
+
+    if params[:image]
+      @user.image_name = "#{@user.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.image_name}", image.read)
+    else
+      @user.image_name = "default_user.png"
+    end
+    @user.save
   end
 
   def login
@@ -50,6 +58,29 @@ class UsersController < ApplicationController
     if @current_user.id != params[:id].to_i
       flash[:notice] = "権限がありません"
       redirect_to("/")
+    end
+  end
+
+  def edit
+    @user = User.find_by(id: params[:id])
+  end
+
+  def update
+    @user = User.find_by(id: params[:id])
+    @user.name = params[:name]
+    @user.password = params[:password]
+    
+    if params[:image]
+      @user.image_name = "#{@user.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.image_name}", image.read)
+    end
+    
+    if @user.save
+      flash[:notice] = "ユーザー情報を編集しました"
+      redirect_to("/users/#{@user.id}")
+    else
+      render("users/edit")
     end
   end
   

@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.container {
+    margin: 80px 300px;
+    background-color: skyblue;
+}
+
 .signup-h1 {
     text-align: center;
 }
@@ -44,4 +49,26 @@
 .signup-btn {
     text-align: center;
     margin-top: 20px;
+}
+
+.user {
+    display: flex;
+}
+
+.bio-left {
+    flex: 1;
+    text-align: center;
+    background-color: bisque;
+}
+
+.bio-left img {
+    border-radius: 100%;
+    border: 3px solid black;
+    height: 250px;
+    width: 250px;
+}
+
+.bio-right {
+    flex: 2;
+    background-color: rgb(72, 230, 177);
 }
