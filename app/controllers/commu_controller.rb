@@ -4,7 +4,11 @@ class CommuController < ApplicationController
   def top
   end
 
-  def create
-    
+  def new
+    @commu = Community.new
   end
+
+  def create
+  end
+
 end
