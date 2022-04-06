@@ -4,17 +4,17 @@
 <div class="commu-form">
     <%= form_tag("/commu/create", {multipart: true}) do %>
         <p>コミュニティ名</p>
-        <input type="text", name="name" value="<%= @commu.name %>", placeholder="community name">
+        <input type="text", name="name" value="<%= @commu.name %>", placeholder="コミュニティ名">
         <p>ジャンル</p>
         <input type="text" name="genre" value="<%= @commu.genre %>", placeholder="ジャンル">
         <p>エリア</p>
         <input type="text" name="area" value="<%= @commu.area %>", placeholder="エリア">
         <p>参考画像</p>
-        <input type="file", name="image">
-        <p>投稿者</p>
-        <input type="text", name="user-id">
+        <input type="file", name="image1">
+        <input type="file", name="image2">
+        <input type="file", name="image3">
         <p>活動内容・ルール</p>
-        <textarea name="detail"  cols="40" rows="5"></textarea>
+        <textarea name="detail"  cols="40" rows="5" value="<%= @commu.detail %>"></textarea>
         <input type="submit" value="作成" class="">
     <% end %>
 </div>
