@@ -5,6 +5,11 @@
         <%= image_tag "connection.png", size: '553x416' %>
     </div>
     <div class="form">
+        <% if @error_message %>
+            <div class="login-error">
+                <%= @error_message %>
+            </div>
+        <% end %>
         <div class="login-form">
             <%= form_tag("/login") do %>
                 <p> ユーザー名</p>

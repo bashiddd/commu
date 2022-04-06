@@ -8,7 +8,9 @@
             <% if @current_user.id == @user.id %>
                 <%= link_to("編集", "/users/#{@user.id}/edit") %>
             <% end %>
-            <p><%= @user.bio %></p>
+            <div class="bio">
+                <p><%= @user.bio %></p>
+            </div>
         </div>
     </div>
 </div>
