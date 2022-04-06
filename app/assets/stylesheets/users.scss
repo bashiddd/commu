@@ -58,7 +58,9 @@
 .bio-left {
     flex: 1;
     text-align: center;
-    background-color: bisque;
+    // background-color: bisque;
+    background-color: #e7eded;
+
 }
 
 .bio-left img {
@@ -70,7 +72,36 @@
 
 .bio-right {
     flex: 2;
-    background-color: rgb(72, 230, 177);
+    background-color: #e7eded;
+}
+
+.edit {
+    // display: block;
+    text-align: center;
+    margin: 50px 0 0 500px;
+    width: 40px;
+    height: 25px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;    
+}
+
+.editbtn {
+    text-decoration: none;
+    color: black;
+    line-height: 25px;
+}
+
+.edit:hover {
+    opacity: 0.8;
+}
+
+.bio {
+    background-color: #e7eded;
+    margin: 0 auto;
+    padding: 30px 5px 10px 5px;
+    height: 250px;
+    font-size: 14px;
 }
 
 .edit-h1 {
@@ -112,16 +143,9 @@
     text-align: center;
 }
 
-// .edit-form input[type="submit"] {
-//     display: block;
-//     margin: 0 auto;
-//     margin-top: 20px;
-// }
-
 .edit-btn {
     display: block;
     margin: 0 auto;
-    // text-align: center;
     text-decoration: none;
     border: 2px solid black;
     border-color: rgb(118,118,118);
