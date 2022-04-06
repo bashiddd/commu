@@ -38,9 +38,12 @@ class CommuController < ApplicationController
     image3 = params[:image3]
     File.binwrite("public/commu_images3/#{@commu.image_name3}", image3.read)
     
+    @commu.save
+    
   end
 
   def show
+    @commu = Community.find_by(id: params[:id])
   end
 
 end

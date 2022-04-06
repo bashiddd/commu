@@ -2,7 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-header {
-    height: 70px;
-    background-color: rgb(227, 235, 118);
+.commu-show {
+    display: flex;
+    margin: 0 100px;
+}
+
+.commu-left {
+    flex: 1;
+    height: 700px;
+    background-color: antiquewhite;
+}
+
+.commu-left h1 {
+    text-align: center;
+}
+
+.commu-img {
+    display: flex;
+    overflow-x: scroll;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.commu-img img {
+    height: 380px;
+    width: 380px;
+}
+
+.commu-right {
+    flex: 1;
+    background-color: beige;
 }
