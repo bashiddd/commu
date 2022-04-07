@@ -16,7 +16,8 @@ class CommuController < ApplicationController
       detail: params[:detail],
       image_name1: params[:image1],
       image_name2: params[:image2],
-      image_name3: params[:image3]
+      image_name3: params[:image3],
+      created_by: @current_user.name
     )
     
     if @commu.save
@@ -44,6 +45,7 @@ class CommuController < ApplicationController
 
   def show
     @commu = Community.find_by(id: params[:id])
+    @create_user = User.find_by(name: @commu.created_by)
   end
 
 end
