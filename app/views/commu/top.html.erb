@@ -1,2 +1,28 @@
-<h1>Commu#top</h1>
-<p>Find me in app/views/commu/top.html.erb</p>
+<div class="commu-container">
+    <div class="top-left">
+            <%= form_tag("/commu/narrow_down") do  %>
+                <div class="commu-area">
+                    <select name="area">
+                        <% @commus.each do |commu|%>
+                            <option value="<%= commu.area %>"><%= commu.area %></option>
+                        <% end %>
+                        <option value="すべて">すべて</option>
+                    </select>
+                </div>
+                <div class="commu-genre">
+                    <select name="genre">
+                        <% @commus.each do |commu|%>
+                            <option value="<%= commu.genre %>"><%= commu.genre %></option>
+                        <% end %>
+                        <option value="すべて">すべて</option>
+                    </select>
+                </div>
+                <input type="submit" value="絞り込む", class="narrow_down-btn">
+            <% end %>
+    </div>
+    <div class="top-right">
+        <% @commus.each do |commu| %>
+            <%= link_to("#{commu.name}","/commu/#{commu.id}") %>
+        <% end %>
+    </div>
+</div>

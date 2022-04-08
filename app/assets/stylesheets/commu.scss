@@ -36,3 +36,30 @@
     flex: 1;
     background-color: beige;
 }
+
+.commu-container {
+    height: 800px;
+    background-color: antiquewhite;
+    margin: 0 100px;
+    display: flex;
+}
+
+.top-left {
+    flex: 1;
+    background-color: aliceblue;
+}
+
+.top-right {
+    flex: 2;
+    background-color: rgb(192, 227, 215);
+}
+
+.commu-area {
+    height: 30px;
+    width: 100px;
+    // background-color: rgb(196, 166, 144);
+}
+
+.commu-area option {
+    color: black;
+}

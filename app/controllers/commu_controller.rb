@@ -2,6 +2,19 @@ class CommuController < ApplicationController
   before_action :authenticate_user, {only: [:top]}
 
   def top
+    @commus = Community.all
+  end
+
+  def narrow_down
+    if params[:area]=="すべて" && params[:genre]=="すべて"
+      @commus = Community.all
+    elsif params[:area]!="すべて" && params[:genre]=="すべて"
+      @commus = Community.where(area: params[:area])
+    elsif params[:area]=="すべて" && params[:genre]!="すべて"
+      @commus = Community.where(genre: params[:genre])
+    elsif params[:area]!="すべて" && params[:genre]!="すべて"
+      @commus = Community.where(area: params[:area], genre: params[:genre])
+    end
   end
 
   def new
