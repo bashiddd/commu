@@ -1,6 +1,6 @@
 <div class="commu-container">
     <div class="narrow-down">
-            <%= form_tag("/commu/narrow_down") do  %>
+            <%= form_tag("/commu/narrow_down", method: :get) do  %>
                 <div class="commu-area">
                     <p>エリア:</p>
                     <select name="area">
@@ -29,6 +29,7 @@
             </div>
             <div class="commu-index-right">
                 <%= link_to("#{commu.name}", "/commu/#{commu.id}", class: "commu-index-name") %>
+                <p><%= commu.overview %></p>
             </div>
         </div>
     <% end %>

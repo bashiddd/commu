@@ -89,7 +89,7 @@
 .commu-index {
     background-color: white;
     display: flex;
-    margin: 10px 140px;
+    margin: 10px 160px;
     border: 1px solid black;
 }
 
@@ -119,4 +119,9 @@
 
 .commu-index-name:hover {
     opacity: 0.6;
+}
+
+.commu-index-right p {
+    font-weight: normal;
+    font-size: 13px;
 }

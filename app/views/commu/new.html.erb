@@ -7,14 +7,16 @@
         <input type="text", name="name" value="<%= @commu.name %>", placeholder="コミュニティ名">
         <p>ジャンル</p>
         <input type="text" name="genre" value="<%= @commu.genre %>", placeholder="ジャンル">
-        <p>エリア</p>
+        <p>エリア(都道府県名)</p>
         <input type="text" name="area" value="<%= @commu.area %>", placeholder="エリア">
         <p>参考画像</p>
         <input type="file", name="image1">
         <input type="file", name="image2">
         <input type="file", name="image3">
+        <p>活動概要</p>
+        <textarea name="overview"  cols="40" rows="5" value="<%= @commu.overview %>"></textarea>
         <p>活動内容・ルール</p>
-        <textarea name="detail"  cols="40" rows="5" value="<%= @commu.detail %>"></textarea>
+        <textarea name="detail"  cols="40" rows="10" value="<%= @commu.detail %>"></textarea>
         <input type="submit" value="作成" class="">
     <% end %>
 </div>
