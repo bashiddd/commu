@@ -3,9 +3,15 @@ class CommuController < ApplicationController
 
   def top
     @commus = Community.all
+    @commus_area = @commus.pluck(:area).uniq
+    @commus_genre = @commus.pluck(:genre).uniq
   end
-
+  
   def narrow_down
+    @commus = Community.all
+    @commus_area = @commus.pluck(:area).uniq
+    @commus_genre = @commus.pluck(:genre).uniq
+
     if params[:area]=="すべて" && params[:genre]=="すべて"
       @commus = Community.all
     elsif params[:area]!="すべて" && params[:genre]=="すべて"

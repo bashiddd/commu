@@ -39,27 +39,84 @@
 
 .commu-container {
     height: 800px;
-    background-color: antiquewhite;
-    margin: 0 100px;
-    display: flex;
+    background-color: rgb(240, 244, 248);
+    margin: 50px 180px 0 180px;
 }
 
-.top-left {
-    flex: 1;
-    background-color: aliceblue;
+.narrow-down {
+    background-color: rgb(240, 244, 248);
+    height: 80px;
+    border-bottom: 1px solid rgb(102, 102, 102);
 }
 
-.top-right {
-    flex: 2;
-    background-color: rgb(192, 227, 215);
+
+.narrow-down p {
+    display: inline-block;
+}
+
+.narrow-down select {
+    height: 30px;
+    width: 85px;
+}
+
+.narrow_down-btn input {
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0 3px 0 darken(rgb(243, 243, 243), 10%);
+}
+
+.narrow_down-btn:hover {
+    opacity: 0.8;
+}
+
+.narrow_down-btn:active {
+    box-shadow: none;
+    transform: translateY(3px);
 }
 
 .commu-area {
-    height: 30px;
-    width: 100px;
-    // background-color: rgb(196, 166, 144);
+    height: 70px;
+    display: inline-block;
+    line-height: 81px;
+    margin-left: 40px;
 }
 
-.commu-area option {
+.commu-genre {
+    height: 70px;
+    display: inline-block;
+    line-height: 81px;
+}
+
+.commu-index {
+    background-color: white;
+    display: flex;
+    margin: 10px 140px;
+    border: 1px solid black;
+}
+
+.commu-index-left {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.commu-index-left img {
+    height: 130px;
+    width: 130px;
+}
+
+.commu-index-right {
+    flex: 2;
+    font-weight: bold;
+    margin: 15px 15px 15px 0;
+}
+
+.commu-index-name {
+    text-decoration: none;
     color: black;
+    font-size: 20px;
+}
+
+.commu-index-name:hover {
+    opacity: 0.6;
 }

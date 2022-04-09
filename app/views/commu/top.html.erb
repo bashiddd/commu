@@ -1,28 +1,35 @@
 <div class="commu-container">
-    <div class="top-left">
+    <div class="narrow-down">
             <%= form_tag("/commu/narrow_down") do  %>
                 <div class="commu-area">
+                    <p>エリア:</p>
                     <select name="area">
-                        <% @commus.each do |commu|%>
-                            <option value="<%= commu.area %>"><%= commu.area %></option>
-                        <% end %>
                         <option value="すべて">すべて</option>
+                        <% @commus_area.each do |commu_area|%>
+                            <option value="<%= commu_area %>"><%= commu_area %></option>
+                        <% end %>
                     </select>
                 </div>
                 <div class="commu-genre">
+                    <p>ジャンル:</p>
                     <select name="genre">
-                        <% @commus.each do |commu|%>
-                            <option value="<%= commu.genre %>"><%= commu.genre %></option>
-                        <% end %>
                         <option value="すべて">すべて</option>
+                        <% @commus_genre.each do |commu_genre|%>
+                            <option value="<%= commu_genre %>"><%= commu_genre %></option>
+                        <% end %>
                     </select>
                 </div>
                 <input type="submit" value="絞り込む", class="narrow_down-btn">
             <% end %>
     </div>
-    <div class="top-right">
-        <% @commus.each do |commu| %>
-            <%= link_to("#{commu.name}","/commu/#{commu.id}") %>
-        <% end %>
-    </div>
+    <% @commus.each do |commu| %>
+        <div class="commu-index">
+            <div class="commu-index-left">
+                <img src="<%= "/commu_images1/#{commu.image_name1}" %>">
+            </div>
+            <div class="commu-index-right">
+                <%= link_to("#{commu.name}", "/commu/#{commu.id}", class: "commu-index-name") %>
+            </div>
+        </div>
+    <% end %>
 </div>
