@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'notifications/index'
+  get 'members/index'
   get '/' => "home#top"
   get "commu/top" => "commu#top"
 

@@ -61,6 +61,8 @@ class CommuController < ApplicationController
     
     @commu.save
     
+    @member = Member.new(commu_id: @commu.id, user_id: @current_user.id)
+    @member.save
   end
 
   def show
