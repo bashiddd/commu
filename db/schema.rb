@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_10_092722) do
+ActiveRecord::Schema.define(version: 2022_04_10_093338) do
 
   create_table "communities", force: :cascade do |t|
     t.string "name"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(version: 2022_04_10_092722) do
 
   create_table "members", force: :cascade do |t|
     t.integer "user_id"
+    t.integer "commu_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.integer "receiver_id"
+    t.integer "sender_id"
     t.integer "commu_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
