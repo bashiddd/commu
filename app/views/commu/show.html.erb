@@ -11,6 +11,6 @@
         <h2>エリア: <%= @commu.area %></h2>
         <h2>ジャンル : <%= @commu.genre %></h2>
         <h2>投稿者 : <%= link_to("#{@commu.created_by}", "/users/#{@create_user.id}") %></h2>
-        <h2><%= link_to("メンバー一覧", "/users/#{@create_user.id}") %></h2>
+        <h2><%= link_to("メンバー", "/members/#{@commu.id}") %></h2>
     </div>
 </div>

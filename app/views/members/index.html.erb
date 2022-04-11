@@ -1,2 +1,17 @@
-<h1>Members#index</h1>
-<p>Find me in app/views/members/index.html.erb</p>
+<div class="member-index">
+    <h1><%= @commu.name %>  メンバー</h1>
+    <div class="member">
+        <% @members.each do |member| %>
+            <div class="member-img">
+                <% if member.image_name=="default_user.png" %>
+                    <img src="<%= "/user_images/default_user.png" %>">
+                <% else %>
+                    <img src="<%= "/user_images/#{member.id}" %>">
+                <% end %>
+            </div>
+            <div class="member-name">
+                <%= link_to("#{member.name}", "/users/#{member.id}", class: "member_name") %>
+            </div>
+        <% end %>
+    </div>
+</div>

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'notifications/index'
-  get 'members/index'
   get '/' => "home#top"
   get "commu/top" => "commu#top"
 
@@ -17,6 +16,8 @@ Rails.application.routes.draw do
   post "commu/create" => "commu#create"
   get "commu/narrow_down" => "commu#narrow_down"
   get "commu/:id" => "commu#show"
+
+  get "members/:id" => "members#index"
   # get 'posts/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
