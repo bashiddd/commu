@@ -8,13 +8,14 @@
 
 .member-index {
     margin: 10px 160px;
-    background-color: aliceblue;
+    background-color: rgb(240, 244, 248);
 }
 
 .member {
     margin: 5px 230px;
-    background-color: aquamarine;
+    background-color: white;
     display: flex;
+    border: 1px solid black;
 }
 
 .member-img {
@@ -39,8 +40,11 @@
 }
 
 .member_name {
-    text-decoration: none;
     color: black;
     font-size: 20px;
     margin-left: 100px;
+}
+
+.member_name:hover {
+    opacity: 0.6;
 }

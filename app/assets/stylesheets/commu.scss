@@ -4,13 +4,15 @@
 
 .commu-show {
     display: flex;
-    margin: 0 160px;
+    margin: 50px 180px 0 180px;
+    background-color: rgb(240, 244, 248);
 }
 
 .commu-left {
     flex: 1;
     height: 700px;
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
+    margin-left: 100px;
 }
 
 .commu-left h1 {
@@ -34,12 +36,34 @@
 
 .commu-right {
     flex: 1;
-    background-color: beige;
-    padding-top: 100px;
+    // background-color: beige;
+    padding-top: 130px;
+    padding-left: 60px;
+    margin-right: 100px;
+}
+
+.commu-right h2 {
+    margin-bottom: 40px;
+}
+
+.create_user_name {
+    // text-decoration: none;
+    color: black;
+}
+
+.create_user_name:hover {
+    opacity: 0.6;
+}
+
+.commu_member {
+    color: black;
+}
+
+.commu_member:hover {
+    opacity: 0.6;
 }
 
 .commu-container {
-    height: 800px;
     background-color: rgb(240, 244, 248);
     margin: 50px 180px 0 180px;
 }
