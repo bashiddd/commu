@@ -20,6 +20,7 @@
       </div>
       <div class="header-menus">
         <% if @current_user %>
+          <%= link_to("通知","/notifications/index", class: "notification-btn") %>
           <%= link_to("つくる","/commu/new", class: "create-commu") %>
           <%= link_to("マイページ","/users/#{@current_user.id}", class: "my-page") %>
           <%= link_to("ログアウト","/logout", method: "post", class: "logout") %>

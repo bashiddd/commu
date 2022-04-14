@@ -18,8 +18,10 @@ Rails.application.routes.draw do
   
   get "members/:id" => "members#index"
 
-  get 'notifications/index'
+  get "notifications/index" => "notifications#index"
   post "apply/:id" => "notifications#apply"
+  post "approval/:id" => "members#approval"
+  post "rejection/:id" => "members#rejection"
   # get 'posts/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

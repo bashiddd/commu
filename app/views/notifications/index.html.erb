@@ -1,2 +1,13 @@
-<h1>Notifications#index</h1>
-<p>Find me in app/views/notifications/index.html.erb</p>
+<div class="notification-index">
+    <% @notifications.each do |notification| %>
+        <div class="notification">
+            <% commu = Community.find_by(id: notification.commu_id) %>
+            <% user = User.find_by(id: notification.sender_id) %>
+            <p><%= link_to("#{user.name}", "/users/#{user.id}") %>さんが<%= link_to("#{commu.name}", "/commu/#{commu.id}") %>に参加申請しました。</p>
+        </div>
+        <div class="approval">
+            <%= link_to("承認", "/approval/#{notification.id}", method: "post") %>
+            <%= link_to("拒否", "/rejection/#{notification.id}", method: "post") %>
+        </div>
+    <% end %>
+</div>
