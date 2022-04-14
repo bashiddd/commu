@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # before_action :authenticate_user, {only: [:show]}
   before_action :forbid_login_user, {only: [:login]}
-  before_action :ensure_correct_user, {only: [:show]}
+  # before_action :ensure_correct_user, {only: [:show]}
   def new
     @user = User.new
   end
@@ -75,6 +75,8 @@ class UsersController < ApplicationController
       @user.image_name = "#{@user.id}.jpg"
       image = params[:image]
       File.binwrite("public/user_images/#{@user.image_name}", image.read)
+    else
+      @user.image_name = "default_user.png"
     end
     
     if @user.save

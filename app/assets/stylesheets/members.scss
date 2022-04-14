@@ -7,14 +7,16 @@
 }
 
 .member-index {
-    margin: 10px 160px;
+    margin: 30px 160px;
     background-color: rgb(240, 244, 248);
+    display: flex;
+    flex-flow: column;
 }
 
 .member {
+    display: flex;
     margin: 5px 230px;
     background-color: white;
-    display: flex;
     border: 1px solid black;
 }
 
@@ -36,7 +38,6 @@
     font-weight: bold;
     display: flex;
     align-items: center;
-    
 }
 
 .member_name {

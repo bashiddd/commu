@@ -1,7 +1,7 @@
 <div class="member-index">
     <h1><%= @commu.name %>  メンバー</h1>
-    <div class="member">
-        <% @members.each do |member| %>
+    <% @members.each do |member| %>
+        <div class="member">
             <div class="member-img">
                 <% if member.image_name=="default_user.png" %>
                     <img src="<%= "/user_images/default_user.png" %>">
@@ -12,6 +12,6 @@
             <div class="member-name">
                 <%= link_to("#{member.name}", "/users/#{member.id}", class: "member_name") %>
             </div>
-        <% end %>
-    </div>
+        </div>
+    <% end %>
 </div>
