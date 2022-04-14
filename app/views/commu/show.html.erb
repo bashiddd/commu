@@ -12,9 +12,9 @@
         <h2>ジャンル : <%= @commu.genre %></h2>
         <h2>投稿者 : <%= link_to("#{@commu.created_by}", "/users/#{@create_user.id}", class: "create_user_name") %></h2>
         <h2><%= link_to("参加メンバー", "/members/#{@commu.id}", class: "commu_member") %></h2>
-        <div class="request">
+        <div class="apply">
             <% if Member.exists?(commu_id: "#{@commu.id}", user_id: "#{@current_user.id}")==false && Notification.exists?(sender_id: "#{@current_user.id}", commu_id: "#{@commu.id}")==false %>
-                <%= link_to("参加申請", "/apply/#{@commu.id}", method: "post") %>
+                <%= link_to("参加申請", "/apply/#{@commu.id}", method: "post", class: "apply-btn") %>
             <% elsif Notification.exists?(sender_id: "#{@current_user.id}", commu_id: "#{@commu.id}") %>
                 <p>参加申請中です</p>
             <% end %>

@@ -63,6 +63,39 @@
     opacity: 0.6;
 }
 
+.apply {
+    text-align: center;
+    line-height: 40px;
+}
+
+.apply-btn {
+    display: block;
+    border: 1px solid rgb(118,118,118);
+    height: 40px;
+    width: 130px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 5px 0 darken(rgb(240, 244, 248), 10%);
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    opacity: 0.6;
+}
+
+.apply-btn:active {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+.apply p {
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .commu-container {
     background-color: rgb(240, 244, 248);
     margin: 50px 180px 0 180px;
