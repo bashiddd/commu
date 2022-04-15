@@ -3,9 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .commu-show {
-    display: flex;
     margin: 50px 180px 0 180px;
     background-color: rgb(240, 244, 248);
+}
+
+.commu-top {
+    display: flex;
 }
 
 .commu-left {
@@ -94,6 +97,10 @@
 .apply p {
     font-weight: bold;
     text-decoration: none;
+}
+
+.commu-bottom {
+    margin: 0 100px;
 }
 
 .commu-container {
