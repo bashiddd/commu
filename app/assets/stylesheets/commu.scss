@@ -4,7 +4,7 @@
 
 .commu-show {
     margin: 50px 180px 0 180px;
-    background-color: rgb(240, 244, 248);
+    background-color: #e7eded;
 }
 
 .commu-top {
@@ -14,7 +14,6 @@
 .commu-left {
     flex: 1;
     height: 700px;
-    // background-color: antiquewhite;
     margin-left: 100px;
 }
 
@@ -104,14 +103,16 @@
 }
 
 .commu-container {
-    background-color: rgb(240, 244, 248);
     margin: 50px 180px 0 180px;
+    background-color: lighten(#78d5d7, 30%);
+    background-color: #e7eded;
 }
 
 .narrow-down {
-    background-color: rgb(240, 244, 248);
+    // background-color: rgb(240, 244, 248);
     height: 80px;
     border-bottom: 1px solid rgb(102, 102, 102);
+    background-color: #e7eded;
 }
 
 
@@ -189,4 +190,16 @@
 .commu-index-right p {
     font-weight: normal;
     font-size: 13px;
+}
+
+.commu_create_form {
+    margin: 50px 240px 0 240px;
+    background-color: #e7eded;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 100px;
+}
+
+.commu_create_form h1 {
+
 }
