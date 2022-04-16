@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   
   get "signup" => "users#new"
   post "users/create" => "users#create"
+  get "users/create" => "users#new_reload"
   post "login" => "users#login"
+  get "login" => "users#login_reload"
   post "logout" => "users#logout"
   
   post 'users/:id/update' => "users#update"
@@ -13,6 +15,7 @@ Rails.application.routes.draw do
   
   get "commu/new" => "commu#new"
   post "commu/create" => "commu#create"
+  get "commu/create" => "commu#new_reload"
   get "commu/narrow_down" => "commu#narrow_down"
   get "commu/:id" => "commu#show"
   

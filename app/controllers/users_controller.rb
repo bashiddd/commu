@@ -17,6 +17,7 @@ class UsersController < ApplicationController
       flash[:notice] = "新規登録が完了しました"
       redirect_to("/commu/top")
     else
+      flash[:notice] = "すべて入力してください"
       render("users/new")
     end
 
@@ -30,7 +31,48 @@ class UsersController < ApplicationController
     @user.save
   end
 
+  def new_reload
+    @user = User.new(
+      name: params[:name],
+      password: params[:password],
+    )
+    
+    if @user.save
+      session[:user_id] = @user.id
+      flash[:notice] = "新規登録が完了しました"
+      redirect_to("/commu/top")
+    else
+      flash[:notice] = "すべて入力してください"
+      render("users/new")
+    end
+
+    if params[:image]
+      @user.image_name = "#{@user.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.image_name}", image.read)
+    else
+      @user.image_name = "default_user.png"
+    end
+    @user.save
+  end
+
+
+
   def login
+    @user = User.find_by(name: params[:name], password: params[:password])
+    if @user
+      session[:user_id] = @user.id
+      flash[:notice] = "ログインしました"
+      redirect_to("/commu/top")
+    else
+      @error_message = "ユーザー名またはパスワードが違います"
+      @name = params[:name] 
+      @password = params[:password]
+      render("home/top") 
+    end
+  end
+
+  def login_reload
     @user = User.find_by(name: params[:name], password: params[:password])
     if @user
       session[:user_id] = @user.id
