@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_10_093338) do
+ActiveRecord::Schema.define(version: 2022_04_17_111534) do
 
   create_table "communities", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 2022_04_10_093338) do
     t.string "image_name3"
     t.string "created_by"
     t.text "overview"
+    t.text "age_gender"
+    t.text "place"
+    t.text "rule"
   end
 
   create_table "members", force: :cascade do |t|
