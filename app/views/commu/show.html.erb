@@ -4,8 +4,6 @@
             <h1><%= @commu.name %></h1>
             <div class="commu-img">
                 <img src="<%= "/commu_images1/#{@commu.image_name1}" %>">
-                <img src="<%= "/commu_images2/#{@commu.image_name2}" %>">
-                <img src="<%= "/commu_images3/#{@commu.image_name3}" %>">
             </div>
         </div>
         <div class="commu-right">
@@ -23,6 +21,16 @@
         </div>
     </div>
     <div class="commu-bottom">
-        <%= @commu.detail %>
+        <h1>コミュニティについて</h1>
+        <div class="bottom-img">
+            <img src="<%= "/commu_images2/#{@commu.image_name2}" %>">
+            <img src="<%= "/commu_images3/#{@commu.image_name3}" %>">
+        </div>
+        <div class="commu-detail">
+            <p><%= @commu.detail %></p>
+            <p>■年齢層・男女比</p>
+            <p>■主な活動場所</p>
+            <p>■規定</p>
+        </div>
     </div>
 </div>

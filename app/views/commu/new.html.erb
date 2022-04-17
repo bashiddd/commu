@@ -13,10 +13,10 @@
             <input type="file", name="image2">
             <input type="file", name="image3">
             <p>コミュニティ概要</p>
-            <textarea name="overview"  cols="40" rows="5" value="<%= @commu.overview %>" placeholder="30字程度のコミュニティの概要"></textarea>
-            <p>活動内容・ルール</p>
-            <textarea name="detail"  cols="40" rows="10" value="<%= @commu.detail %>" placeholder="活動内容、主な活動場所、年齢層、男女比、ルール等を記入。"><%= @commu.detail %></textarea>
-            <input type="submit" value="作成" class="">
+            <textarea name="overview"  cols="40" rows="5" value="<%= @commu.overview %>" placeholder="コミュニティの概要"></textarea>
+            <p>活動内容</p>
+            <textarea name="detail"  cols="40" rows="10" value="<%= @commu.detail %>" placeholder="活動内容、主な活動場所、年齢層、男女比、ルール等を記入"><%= @commu.detail %></textarea>
+            <input type="submit" value="作成" class="commu-create-btn">
         <% end %>
     </div>
 </div>

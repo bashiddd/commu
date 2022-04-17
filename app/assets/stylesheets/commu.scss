@@ -3,18 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .commu-show {
-    margin: 50px 180px 0 180px;
-    background-color: #e7eded;
+    margin: 50px 230px 300px 230px;
+    // background-color: #e7eded;
+    // background-color: lighten(#e7eded,3%);
 }
 
 .commu-top {
     display: flex;
+    border-bottom: 1px solid gray;
 }
 
 .commu-left {
     flex: 1;
-    height: 700px;
-    margin-left: 100px;
+    height: 650px;
+    margin-left: 80px;
 }
 
 .commu-left h1 {
@@ -24,7 +26,7 @@
 
 .commu-img {
     display: flex;
-    overflow-x: scroll;
+    // overflow-x: scroll;
     height: 400px;
     width: 400px;
     margin: 0 auto;
@@ -41,7 +43,7 @@
     // background-color: beige;
     padding-top: 130px;
     padding-left: 60px;
-    margin-right: 100px;
+    margin-right: 80px;
 }
 
 .commu-right h2 {
@@ -80,7 +82,7 @@
     color: black;
     border-radius: 10px;
     background-color: #f5f5f5;
-    box-shadow: 0 5px 0 darken(rgb(240, 244, 248), 10%);
+    box-shadow: 0 5px 0 darken(white, 10%);
     cursor: pointer;
 }
 
@@ -102,10 +104,27 @@
     margin: 0 100px;
 }
 
+.bottom-img {
+    display: flex;
+    // background-color: #e7eded;
+    justify-content: center;
+}
+
+.bottom-img img {
+    height: 200px;
+    width: 200px;
+    margin: 0 70px;
+    border-radius: 3px;
+}
+
+.commu-detail {
+    margin-top: 50px;
+}
+
 .commu-container {
-    margin: 50px 180px 0 180px;
-    background-color: lighten(#78d5d7, 30%);
+    margin: 50px 180px 300px 180px;
     background-color: #e7eded;
+    background-color: lighten(#e7eded, 3%);
 }
 
 .narrow-down {
@@ -113,6 +132,7 @@
     height: 80px;
     border-bottom: 1px solid rgb(102, 102, 102);
     background-color: #e7eded;
+    background-color: lighten(#e7eded, 3%);
 }
 
 
@@ -193,13 +213,27 @@
 }
 
 .commu_create_form {
-    margin: 50px 240px 0 240px;
+    margin: 50px 245px 0 245px;
     background-color: #e7eded;
     border: 1px solid black;
     border-radius: 10px;
-    padding-left: 100px;
+    padding: 15px 100px;
 }
 
-.commu_create_form h1 {
+.commu-create-btn {
+    width: 80px;
+    margin-left: 30px;
+    border: 1px solid rgb(118,118,118);
+    border-radius: 10px;
+    box-shadow: 0 5px 0 darken(rgb(240, 244, 248), 10%);
+    cursor: pointer;
+}
 
+.commu-create-btn:hover {
+    opacity: 0.6;
+}
+
+.commu-create-btn:active {
+    transform: translateY(5px);
+    box-shadow: none;
 }
