@@ -37,7 +37,10 @@ class CommuController < ApplicationController
       image_name2: params[:image2],
       image_name3: params[:image3],
       created_by: @current_user.name,
-      overview: params[:overview]
+      overview: params[:overview],
+      age_gender: params[:age_gender],
+      place: params[:place],
+      rule: params[:rule]
     )
     
     if @commu.save
@@ -76,7 +79,10 @@ class CommuController < ApplicationController
       image_name2: params[:image2],
       image_name3: params[:image3],
       created_by: @current_user.name,
-      overview: params[:overview]
+      overview: params[:overview],
+      age_gender: params[:age_gender],
+      place: params[:place],
+      rule: params[:rule]
     )
     
     if @commu.save
@@ -108,6 +114,7 @@ class CommuController < ApplicationController
   def show
     @commu = Community.find_by(id: params[:id])
     @create_user = User.find_by(name: @commu.created_by)
+    @number = Member.where(commu_id: @commu.id).count
   end
 
 end

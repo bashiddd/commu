@@ -213,11 +213,15 @@
 }
 
 .commu_create_form {
-    margin: 50px 245px 0 245px;
+    margin: 50px 245px 300px 245px;
     background-color: #e7eded;
     border: 1px solid black;
     border-radius: 10px;
     padding: 15px 100px;
+}
+
+.commu-form input[type="text"] {
+    display: inline;
 }
 
 .commu-create-btn {
