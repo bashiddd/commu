@@ -1,13 +1,14 @@
+<div class="notification-h2"><h2>通知</h2></div>
 <div class="notification-index">
     <% @notifications.each do |notification| %>
         <div class="notification">
             <% commu = Community.find_by(id: notification.commu_id) %>
             <% user = User.find_by(id: notification.sender_id) %>
-            <p><%= link_to("#{user.name}", "/users/#{user.id}") %>さんが<%= link_to("#{commu.name}", "/commu/#{commu.id}") %>に参加申請しました。</p>
+            <p><%= link_to("#{user.name}", "/users/#{user.id}", class: "notification-sender") %>さんが<%= link_to("#{commu.name}", "/commu/#{commu.id}", class: "notification-commu") %>に参加申請しました。</p>
         </div>
-        <div class="approval">
-            <%= link_to("承認", "/approval/#{notification.id}", method: "post") %>
-            <%= link_to("拒否", "/rejection/#{notification.id}", method: "post") %>
+        <div class="notification-approval">
+            <%= link_to("承 認", "/approval/#{notification.id}", method: "post", class: "approval") %>
+            <%= link_to("拒 否", "/rejection/#{notification.id}", method: "post", class: "rejection") %>
         </div>
     <% end %>
 </div>

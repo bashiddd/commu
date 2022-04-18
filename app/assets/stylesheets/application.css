@@ -37,6 +37,7 @@
 header {
     height: 70px;
     background-color: rgb(132, 209, 233);
+    background-color: rgb(12, 52, 64);
     display: flex;
 }
 
