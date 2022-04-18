@@ -5,13 +5,19 @@
             <h2><%= @user.name %></h2>
         </div>
         <div class="bio-right">
-            <div class="edit">
-                <% if @current_user.id == @user.id %>
+            <% if @current_user.id == @user.id %>
+                <div class="edit">
                     <%= link_to("編集", "/users/#{@user.id}/edit", class: "editbtn") %>
-                <% end %>
-            </div>
+                </div>
+            <% end %>
             <div class="bio">
                 <p><%= @user.bio %></p>
+            </div>
+            <div class="link">
+                <a rel="canonial" href="https://atcoder.jp/users/bashid">https://atcoder.jp/users/bashid</a>
+            </div>
+            <div class="my-commu">
+                <%= link_to("所属コミュニティ","/users/#{@user.id}/commu") %>
             </div>
         </div>
     </div>

@@ -129,4 +129,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def commu_index
+    members = Member.where(user_id: params[:id])
+    @commus = []
+    members.each {|member|
+      @commus.push(Community.find_by(id: member.commu_id))
+    }
+  end
+
 end

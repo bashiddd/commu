@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   
   post 'users/:id/update' => "users#update"
   get 'users/:id/edit' => "users#edit"
+  get "users/:id/commu" => "users#commu_index"
   get 'users/:id' => "users#show"
   
   get "commu/new" => "commu#new"
