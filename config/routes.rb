@@ -28,6 +28,9 @@ Rails.application.routes.draw do
   post "approval/:id" => "members#approval"
   post "rejection/:id" => "members#rejection"
 
+  get "posts/:id/new" => "posts#new"
   get "posts/:id" => "posts#index"
+  post "posts/:id/create" => "posts#create"
+  get "posts/:id/create" => "posts#create_reload"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

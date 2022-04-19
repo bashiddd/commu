@@ -2,9 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.post-new-btn {
+    display: block;
+    color: black;
+    font-weight: bold;
+    margin-left: 1000px;
+    margin-top: 30px;
+}
+
 .post-index-h2 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .post-index {
@@ -19,38 +27,99 @@
 
 .post {
     display: flex;
+    flex-flow: column;
     margin: 0;
     background-color: white;
     border: 1px solid black;
+    height: 220px;
+}
+
+.post-user {
+    display: flex;
 }
 
 .post-user-img {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 8px;
 }
 
-.post-img img {
-    height: 130px;
-    width: 130px;
-    margin: 10px;
+.post-user-img img {
+    height: 30px;
+    width: 30px;
     border-radius: 100%;
 }
 
 .post-user-name {
-    flex: 2;
     font-weight: bold;
-    display: flex;
-    align-items: center;
+    margin-top: 8px;
 }
 
 .post_user_name {
     color: black;
     font-size: 20px;
-    margin-left: 100px;
 }
 
 .post_user_name:hover {
     opacity: 0.6;
+}
+
+.post-content {
+    padding: 5px 30px;
+    height: 118px;
+}
+
+.post-content p {
+    margin-top: 0;
+}
+
+.post-bottom {
+    height: 40px;
+}
+
+.post-bottom p {
+    margin: 3px 10px;
+}
+
+.post-new-h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.post-new {
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 430px;
+    margin: 10px 350px 210px 350px;
+    text-align: center;
+}
+
+.post-new textarea {
+    width: 460px;
+    height: 300px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.post-new input {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    border: 1px solid rgb(118,118,118);
+    height: 40px;
+    width: 130px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 5px 0 darken(white, 10%);
+    cursor: pointer;
+}
+
+.post-new input:hover {
+    opacity: 0.6;
+}
+
+.post-new input:active {
+    transform: translateY(5px);
+    box-shadow: none;
 }

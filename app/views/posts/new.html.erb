@@ -1,0 +1,7 @@
+<h2 class="post-new-h2">新規投稿</h2>
+<div class="post-new">
+    <%= form_tag("/posts/#{@commu.id}/create") do %>
+        <textarea name="content" cols="40" rows="10" placeholder="いつ、どこで、何をするか、投稿しよう"></textarea>
+        <input type="submit" value="投稿">
+    <% end %>
+</div>
