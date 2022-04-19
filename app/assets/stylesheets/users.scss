@@ -166,3 +166,51 @@
     box-shadow: none;
     transform: translateY(5px);
 }
+
+.commu-index-h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.my-commu-index {
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 398.3px;
+    margin: 10px 350px 242.1px 350px;
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: column;
+}
+
+.my-commu {
+    display: flex;
+    margin: 0;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.my-commu-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-commu-img img {
+    height: 130px;
+    width: 130px;
+    margin: 10px;
+}
+
+.my-commu-name {
+    flex: 2;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.my_commu_name {
+    color: black;
+    font-size: 20px;
+    margin-left: 100px;
+}

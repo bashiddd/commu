@@ -1,3 +1,13 @@
-<% @commus.each do |commu| %>
-    <p><%= commu.name %></p>
-<% end %>
+<h2 class="commu-index-h2">所属コミュニティ</h2>
+<div class="my-commu-index">
+    <% @commus.each do |commu| %>
+        <div class="my-commu">
+            <div class="my-commu-img">
+                <img src="<%= "/commu_images1/#{commu.image_name1}" %>">
+            </div>
+            <div class="my-commu-name">
+                <%= link_to("#{commu.name}", "/commu/#{commu.id}", class: "my_commu_name") %>
+            </div>
+        </div>
+    <% end %>
+</div>
