@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'likes/index'
   get '/' => "home#top"
   get "commu/top" => "commu#top"
   
@@ -33,5 +32,9 @@ Rails.application.routes.draw do
   get "posts/:id" => "posts#index"
   post "posts/:id/create" => "posts#create"
   get "posts/:id/create" => "posts#create_reload"
+
+  post "likes/:id" => "likes#new"
+  post "likes/:id/destroy" => "likes#destroy"
+  get "likes/:id/index" => "likes#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

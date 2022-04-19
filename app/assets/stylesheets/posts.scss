@@ -72,11 +72,38 @@
 }
 
 .post-bottom {
-    height: 40px;
+    // height: 40px;
+    display: flex;
+    align-items: center;
 }
 
-.post-bottom p {
-    margin: 3px 10px;
+.post-date {
+    margin-left: 10px;
+    margin-right: 45px;
+}
+
+.likes-index {
+    text-decoration: none;
+    color: black;
+}
+
+.likes-index:hover {
+    opacity: 0.6;
+}
+
+.likes-btn {
+    text-decoration: none;
+}
+
+.likes-btn:hover {
+    opacity: 0.6;
+}
+
+.fa-heart::before {
+    font-family: "Font Awesome 5 Free";
+    // color: red;
+    font-weight: 900;
+    text-decoration: none;
 }
 
 .post-new-h2 {
