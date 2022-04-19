@@ -2,26 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container {
-    margin: 80px 300px;
-    background-color: skyblue;
-}
 
 .signup-h1 {
     text-align: center;
+    margin-top: 50px;
 }
 
 .signup-form {
     margin: 0 auto;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 10px;
+    margin-bottom: 224px;
     height: 400px;
     width: 550px;
     border: 3px solid black;
     border-radius: 10px;
     // margin: 133.5px 200px 100px 0;
     background-color: #dee6e6;
-    box-shadow: 6px 6px darken(white, 10%);
+    box-shadow: 0 6px 0px darken(white, 10%);
     font-weight: bold;
 }
 
@@ -51,78 +49,128 @@
     margin-top: 20px;
 }
 
+.mypage-h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.mypage-container {
+    margin: 10px 300px 240px 300px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
 .user {
     display: flex;
+    height: 400px;
 }
 
 .bio-left {
     flex: 1;
     text-align: center;
     // background-color: bisque;
-    background-color: #e7eded;
+    // background-color: #e7eded;
 }
 
 .bio-left img {
     border-radius: 100%;
-    border: 3px solid black;
+    // border: 1px solid black;
     height: 250px;
     width: 250px;
+    margin-top: 5px;
 }
 
 .bio-right {
     flex: 2;
-    background-color: #e7eded;
+    // background-color: #e7eded;
+    display: flex;
+    flex-flow: column;
+    padding-left: 30px;
 }
 
 .edit {
-    // display: block;
     text-align: center;
-    margin: 50px 0 0 500px;
-    width: 40px;
-    height: 25px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;    
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 .editbtn {
     text-decoration: none;
     color: black;
-    line-height: 25px;
+    display: block;
+    background-color: #f5f5f5;
+    border: 1px solid rgb(118,118,118);
+    border-radius: 10px;    
+    width: 50px;
+    height: 28px;
+    line-height: 28px;
+    margin-left: 500px;
+    // box-shadow: 0 3px 0 darken();
 }
 
-.edit:hover {
+.editbtn:hover {
     opacity: 0.8;
 }
 
 .bio {
-    background-color: #e7eded;
-    margin: 0 auto;
-    padding: 30px 5px 10px 5px;
-    height: 250px;
     font-size: 14px;
+    flex: 3;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.link {
+    flex: 1;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    display: flex;
+    align-items: center;
+}
+
+.link a {
+    color: black;
+}
+
+.link a:hover {
+    opacity: 0.6;
+}
+
+.my-commu-link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.my_commu_link {
+    color: black;
+}
+
+.my_commu_link:hover {
+    opacity: 0.6;
 }
 
 .edit-h1 {
     text-align: center;
+    margin-top: 50px;
 }
 
 .edit-form {
     margin: 0 auto;
     text-align: center;
-    margin-top: 70px;
-    height: 580px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    height: 574.5px;
     width: 680px;
     border: 3px solid black;
     border-radius: 10px;
     // margin: 133.5px 200px 100px 0;
+    background-color: lighten(#e7eded, 3%);
     background-color: #dee6e6;
-    box-shadow: 6px 6px darken(white, 10%);
+    box-shadow: 0 6px 0 darken(white, 10%);
     font-weight: bold;
 }
 
 .edit-form p {
-    margin-top: 33px;
+    margin-top: 18px;
 }
 
 .edit-form input[type="text"] {
@@ -145,6 +193,7 @@
 .edit-btn {
     display: block;
     margin: 0 auto;
+    margin-top: 10px;
     text-decoration: none;
     border: 2px solid black;
     border-color: rgb(118,118,118);
