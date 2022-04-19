@@ -15,8 +15,8 @@ class LikesController < ApplicationController
   end
   
   def index
-    post = Post.find_by(id: params[:id])
-    likes = Like.where(post_id: post.id)
+    @post = Post.find_by(id: params[:id])
+    likes = Like.where(post_id: @post.id)
     @users = []
     likes.each {|like|
       user = User.find_by(id: like.user_id)

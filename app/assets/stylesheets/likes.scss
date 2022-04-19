@@ -1,3 +1,81 @@
 // Place all the styles related to the likes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.likes-index-btn {
+    text-decoration: none;
+    color: black;
+}
+
+.likes-index-btn:hover {
+    opacity: 0.6;
+}
+
+.likes-btn {
+    text-decoration: none;
+}
+
+.likes-btn:hover {
+    opacity: 0.6;
+}
+
+.fa-heart::before {
+    font-family: "Font Awesome 5 Free";
+    // color: red;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+
+.likes-index-h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.likes-index {
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 398.3px;
+    margin: 10px 350px 242.1px 350px;
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: column;
+}
+
+.like-user {
+    display: flex;
+    margin: 0;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.like-user-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like-user-img img {
+    height: 130px;
+    width: 130px;
+    margin: 10px;
+    border-radius: 100%;
+}
+
+.like-user-name {
+    flex: 2;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.like_user_name {
+    color: black;
+    font-size: 20px;
+    margin-left: 100px;
+}
+
+.like_user_name:hover {
+    opacity: 0.6;
+}
