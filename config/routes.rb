@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'likes/index'
   get '/' => "home#top"
   get "commu/top" => "commu#top"
   
