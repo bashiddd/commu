@@ -1,3 +1,56 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-index-h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.post-index {
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 700px;
+    margin: 10px 350px 242.1px 350px;
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: column;
+}
+
+.post {
+    display: flex;
+    margin: 0;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.post-user-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-img img {
+    height: 130px;
+    width: 130px;
+    margin: 10px;
+    border-radius: 100%;
+}
+
+.post-user-name {
+    flex: 2;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.post_user_name {
+    color: black;
+    font-size: 20px;
+    margin-left: 100px;
+}
+
+.post_user_name:hover {
+    opacity: 0.6;
+}

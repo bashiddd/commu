@@ -1,0 +1,23 @@
+<h2 class="post-index-h2"><%= @commu.name %> 投稿一覧</h2>
+<div class="post-index">
+    <% @posts.each do |post| %>
+        <div class="post">
+            <div class="post-user">
+                <div class="post-user-img">
+                    <% user = User.find_by(id: post.user_id) %>
+                    <% if user.image_name=="default_user.png" %>
+                        <img src="<%= "/user_images/default_user.png" %>">
+                    <% else %>
+                        <img src="<%= "/user_images/#{user.image_name}" %>">
+                    <% end %>
+                </div>
+                <div class="post-user-name">
+                    <%= link_to("#{user.name}", "/users/#{user.id}", class: "post_user_name") %>
+                </div>
+            </div>
+            <div class="post-content">
+                <%= post.content %>
+            </div>
+        </div>
+    <% end %>
+</div>
