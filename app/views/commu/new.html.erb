@@ -1,25 +1,23 @@
-<div class="commu_create_form">
-    <h1>コミュニティをつくる</h1>
-    <div class="commu-form">
-        <%= form_tag("/commu/create", {multipart: true}) do %>
-            <p>コミュニティ名</p>
-            <input type="text", name="name" value="<%= @commu.name %>", placeholder="コミュニティ名">
-            <p>ジャンル</p>
-            <input type="text" name="genre" value="<%= @commu.genre %>", placeholder="ジャンル">
-            <p>エリア(都道府県名)</p>
-            <input type="text" name="area" value="<%= @commu.area %>", placeholder="エリア">
-            <p>参考画像</p>
-            <input type="file", name="image1">
-            <input type="file", name="image2">
-            <input type="file", name="image3">
-            <p>コミュニティ概要</p>
-            <textarea name="overview"  cols="40" rows="5" value="<%= @commu.overview %>" placeholder="コミュニティの概要"></textarea>
-            <p>コミュニティ詳細</p>
-            <textarea name="detail"  cols="40" rows="10" value="<%= @commu.detail %>" placeholder="活動内容"><%= @commu.detail %></textarea>
-            <textarea name="age_gender"  cols="40" rows="10" value="<%= @commu.age_gender %>" placeholder="年齢層・男女比"><%= @commu.age_gender %></textarea>
-            <textarea name="place"  cols="40" rows="10" value="<%= @commu.place %>" placeholder="主な活動場所"><%= @commu.place %></textarea>
-            <textarea name="rule"  cols="40" rows="10" value="<%= @commu.rule %>" placeholder="ルール"><%= @commu.rule %></textarea>
-            <input type="submit" value="作成" class="commu-create-btn">
-        <% end %>
-    </div>
+<h1 class="commu-form-h1">コミュニティをつくる</h1>
+<div class="commu-form">
+    <%= form_tag("/commu/create", {multipart: true}) do %>
+        <p>コミュニティ名</p>
+        <input type="text", name="name" value="<%= @commu.name %>", placeholder="コミュニティ名">
+        <p>ジャンル</p>
+        <input type="text" name="genre" value="<%= @commu.genre %>", placeholder="ジャンル">
+        <p>エリア(都道府県名)</p>
+        <input type="text" name="area" value="<%= @commu.area %>", placeholder="エリア">
+        <p>参考画像</p>
+        <input type="file", name="image1">
+        <input type="file", name="image2">
+        <input type="file", name="image3">
+        <p>コミュニティ概要</p>
+        <textarea name="overview"  cols="40" rows="5" value="<%= @commu.overview %>" placeholder="コミュニティの概要"></textarea>
+        <p>コミュニティ詳細</p>
+        <textarea name="detail"  cols="40" rows="10" value="<%= @commu.detail %>" placeholder="活動内容"><%= @commu.detail %></textarea>
+        <textarea name="age_gender"  cols="40" rows="10" value="<%= @commu.age_gender %>" placeholder="年齢層・男女比"><%= @commu.age_gender %></textarea>
+        <textarea name="place"  cols="40" rows="10" value="<%= @commu.place %>" placeholder="主な活動場所"><%= @commu.place %></textarea>
+        <textarea name="rule"  cols="40" rows="10" value="<%= @commu.rule %>" placeholder="ルール"><%= @commu.rule %></textarea>
+        <input type="submit" value="作成" class="commu-create-btn">
+    <% end %>
 </div>

@@ -15,7 +15,9 @@
                 <p><%= @user.bio %></p>
             </div>
             <div class="link">
-                <a rel="canonial" href="https://atcoder.jp/users/bashid">● https://atcoder.jp/users/bashid</a>
+                <% if @user.link%>
+                    <a rel="canonial" href="<%= @user.link %>">● <%= @user.link %></a>
+                <% end %>
             </div>
             <div class="my-commu-link">
                 <%= link_to("● 所属コミュニティ","/users/#{@user.id}/commu", class: "my_commu_link") %>

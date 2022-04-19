@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post "logout" => "users#logout"
   
   post 'users/:id/update' => "users#update"
+  get 'users/:id/update' => "users#update_reload"
   get 'users/:id/edit' => "users#edit"
   get "users/:id/commu" => "users#commu_index"
   get 'users/:id' => "users#show"

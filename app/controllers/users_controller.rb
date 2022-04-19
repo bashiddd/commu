@@ -130,6 +130,29 @@ class UsersController < ApplicationController
     end
   end
 
+  def update_reload
+    @user = User.find_by(id: params[:id])
+    @user.name = params[:name]
+    @user.password = params[:password]
+    @user.bio = params[:bio]
+    @user.link = params[:link]
+    
+    if params[:image]
+      @user.image_name = "#{@user.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.image_name}", image.read)
+    else
+      @user.image_name = "default_user.png"
+    end
+    
+    if @user.save
+      flash[:notice] = "ユーザー情報を編集しました"
+      redirect_to("/users/#{@user.id}")
+    else
+      render("users/edit")
+    end
+  end
+
   def commu_index
     members = Member.where(user_id: params[:id])
     @commus = []
