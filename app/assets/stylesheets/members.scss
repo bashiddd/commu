@@ -2,20 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.member-index h1 {
+.member-index-h2 {
     text-align: center;
+    margin-top: 50px;
 }
 
 .member-index {
-    margin: 30px 160px;
-    background-color: rgb(240, 244, 248);
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 398.3px;
+    margin: 10px 350px 242.1px 350px;
+    overflow-y: scroll;
     display: flex;
     flex-flow: column;
 }
 
 .member {
     display: flex;
-    margin: 5px 230px;
+    margin: 0;
     background-color: white;
     border: 1px solid black;
 }
