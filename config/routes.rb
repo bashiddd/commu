@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get "commu/:id" => "commu#show"
   get "commu/:id/edit" => "commu#edit"
   post "commu/:id/update" => "commu#update"
+  get "commu/:id/update" => "commu#update_reload"
   
   get "members/:id" => "members#index"
 
