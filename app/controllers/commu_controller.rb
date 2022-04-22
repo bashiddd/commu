@@ -123,6 +123,41 @@ class CommuController < ApplicationController
 
   def update
     @commu = Community.find_by(id: params[:id])
+
+    @commu.name = params[:name]
+    @commu.genre = params[:genre]
+    @commu.area = params[:area]
+    @commu.detail = params[:detail]
+    @commu.overview = params[:overview]
+    @commu.age_gender = params[:age_gender]
+    @commu.place = params[:place]
+    @commu.rule = params[:rule]
+  
+    if params[:image1]
+      @commu.image_name1 = "#{@commu.id}.jpg"
+      image1 = params[:image1]
+      File.binwrite("public/commu_images1/#{@commu.image_name1}", image1.read)
+    end
+    
+    if params[:image2]
+      @commu.image_name2 = "#{@commu.id}.jpg"
+      image2 = params[:image2]
+      File.binwrite("public/commu_images2/#{@commu.image_name2}", image2.read)
+    end
+
+    if params[:image3]
+      @commu.image_name3 = "#{@commu.id}.jpg"
+      image3 = params[:image3]
+      File.binwrite("public/commu_images3/#{@commu.image_name3}", image3.read)
+    end
+
+    if @commu.save
+      flash[:notice] = "コミュニティ情報を編集しました"
+      redirect_to("/commu/#{@commu.id}")
+    else
+      render("commu/edit")
+    end
+    
   end
   
 
