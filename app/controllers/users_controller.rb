@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # before_action :authenticate_user, {only: [:show]}
-  before_action :forbid_login_user, {only: [:login]}
-  # before_action :ensure_correct_user, {only: [:show]}
+  before_action :forbid_login_user, {only: [:login_reload, :new, :new_reload]}
+  before_action :ensure_correct_user, {only: [:edit, :update, :update_reload]}
   def new
     @user = User.new
   end
