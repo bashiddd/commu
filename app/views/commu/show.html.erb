@@ -10,6 +10,9 @@
             <% if Member.find_by(commu_id: @commu.id, user_id: @current_user.id) %>
                 <%= link_to("投稿一覧", "/posts/#{@commu.id}", class: "commu-post-index") %>
             <% end %>
+            <% if @current_user.id == @create_user.id %>
+                <%= link_to("編集", "/commu/#{@commu.id}/edit", class: "commu-edit") %>
+            <% end %>
             <h2>エリア: <%= @commu.area %></h2>
             <h2>ジャンル : <%= @commu.genre %></h2>
             <h2>投稿者 : <%= link_to("#{@commu.created_by}", "/users/#{@create_user.id}", class: "create_user_name") %></h2>

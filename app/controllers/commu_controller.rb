@@ -117,4 +117,13 @@ class CommuController < ApplicationController
     @number = Member.where(commu_id: @commu.id).count
   end
 
+  def edit
+    @commu = Community.find_by(id: params[:id])
+  end
+
+  def update
+    @commu = Community.find_by(id: params[:id])
+  end
+  
+
 end

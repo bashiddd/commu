@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get "commu/create" => "commu#new_reload"
   get "commu/narrow_down" => "commu#narrow_down"
   get "commu/:id" => "commu#show"
+  get "commu/:id/edit" => "commu#edit"
+  post "commu/:id/update" => "commu#update"
   
   get "members/:id" => "members#index"
 

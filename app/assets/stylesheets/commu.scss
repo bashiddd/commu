@@ -51,6 +51,20 @@
     font-weight: bold;
 }
 
+.commu-post-index:hover {
+    opacity: 0.6;
+}
+
+.commu-edit {
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.commu-edit:hover {
+    opacity: 0.6;
+}
+
 .commu-right h2 {
     margin-bottom: 40px;
 }
@@ -258,6 +272,48 @@
 }
 
 .commu-create-btn:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+.commu-edit-form-h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.commu-edit-form {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 300px;
+    width: 800px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: lighten(#e7eded, 3%);
+    background-color: #dee6e6;
+    font-weight: bold;
+}
+
+.commu-edit-form input[type="text"] {
+    display: inline;
+}
+
+.commu-edit-btn {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    border: 1px solid rgb(118,118,118);
+    border-radius: 10px;
+    box-shadow: 0 4px 0 darken(lighten(#e7eded, 3%), 10%);
+    cursor: pointer;
+}
+
+.commu-edit-btn:hover {
+    opacity: 0.6;
+}
+
+.commu-edit-btn:active {
     transform: translateY(4px);
     box-shadow: none;
 }
