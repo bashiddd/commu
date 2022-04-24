@@ -159,20 +159,26 @@ class CommuController < ApplicationController
       @commu.image_name1 = "#{@commu.id}.jpg"
       image1 = params[:image1]
       File.binwrite("public/commu_images1/#{@commu.image_name1}", image1.read)
+    else
+      @commu.image_name1 = "sample.png"
     end
     
     if params[:image2]
       @commu.image_name2 = "#{@commu.id}.jpg"
       image2 = params[:image2]
       File.binwrite("public/commu_images2/#{@commu.image_name2}", image2.read)
+    else
+      @commu.image_name2 = "sample.png"
     end
-
+    
     if params[:image3]
       @commu.image_name3 = "#{@commu.id}.jpg"
       image3 = params[:image3]
       File.binwrite("public/commu_images3/#{@commu.image_name3}", image3.read)
+    else
+      @commu.image_name3 = "sample.png"
     end
-
+    
     if @commu.save
       flash[:notice] = "コミュニティ情報を編集しました"
       redirect_to("/commu/#{@commu.id}")
@@ -198,18 +204,24 @@ class CommuController < ApplicationController
       @commu.image_name1 = "#{@commu.id}.jpg"
       image1 = params[:image1]
       File.binwrite("public/commu_images1/#{@commu.image_name1}", image1.read)
+    else
+      @commu.image_name1 = "sample.png"
     end
     
     if params[:image2]
       @commu.image_name2 = "#{@commu.id}.jpg"
       image2 = params[:image2]
       File.binwrite("public/commu_images2/#{@commu.image_name2}", image2.read)
+    else
+      @commu.image_name2 = "sample.png"
     end
 
     if params[:image3]
       @commu.image_name3 = "#{@commu.id}.jpg"
       image3 = params[:image3]
       File.binwrite("public/commu_images3/#{@commu.image_name3}", image3.read)
+    else
+      @commu.image_name3 = "sample.png"
     end
 
     if @commu.save
