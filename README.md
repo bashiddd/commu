@@ -14,4 +14,4 @@
 #### I hope you have wonderful meeting!!!!!
 
 # Technology Stack
-#### HTML<br>CSS<br>Ruby<br>Ruby on Rails<br>SQLite
+#### HTML<br>CSS<br>Ruby<br>Ruby on Rails<br>SQLite<br>Heroku
