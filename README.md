@@ -10,7 +10,7 @@
 #### After you apply for participation in a community,<br>
 <img  height="350px" src="https://user-images.githubusercontent.com/96585163/182019987-db1e8797-099a-4636-8392-42b92211dd86.png" /><br>
 #### you can see posts list.
-<img  height="350px" src="" /><br>
+<img  height="350px" src="https://user-images.githubusercontent.com/96585163/182022323-c94d898b-ad5e-4fa9-9b1b-4cce95b2611d.png" /><br>
 #### I hope you have wonderful meeting!!!!!
 
 # Technology Stack
